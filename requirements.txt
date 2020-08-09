@@ -1,0 +1,2 @@
+torchvision==0.6.0
+cachecontrol==0.12.6

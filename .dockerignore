@@ -1,0 +1,9 @@
+.vscode/
+*.egg-info/
+*.ipynb
+bitbucket-pipelines.yml
+**/__pycache__/**
+.version
+readme.md
+setup.py
+data/
