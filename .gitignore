@@ -137,3 +137,6 @@ graphs/
 *play.*
 
 data/**
+
+# Vim
+.vim
