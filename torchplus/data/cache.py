@@ -16,6 +16,9 @@ class LazyRAM():
         if v is None:
             v = self._cache[k] = self.iterable.__getitem__(k)
         return v 
+
+    def __setitem__(self, k, v):
+        self.iterable.__setitem__(k,v)
             
     def check_cache(self, k):
         v = None
