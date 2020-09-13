@@ -35,7 +35,7 @@ class Image:
         if isinstance(source, str):
             if "http" in source[:5]:
                 image = self._download_image()
-            elif path.exists(source):
+            elif path.exists(path.expanduser(source)):
                 image = PILImage.open(source)
             else:
                 raise Exception("Could not load image")
