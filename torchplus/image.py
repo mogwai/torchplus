@@ -26,7 +26,7 @@ class Image:
     Can be created from a variety of different classes but first
     class with tensors
 
-    Provides some useful transformation and conversions to 
+    Provides some useful transformation and conversions to
     base64, a popular web format
     """
 
@@ -35,10 +35,9 @@ class Image:
         if isinstance(source, str):
             if "http" in source[:5]:
                 image = self._download_image()
-            elif path.exists(path.expanduser(source)):
-                image = PILImage.open(source)
             else:
-                raise Exception("Could not load image")
+                self.source = path.expanduser(source)
+                image = PILImage.open(self.source)
         elif isinstance(source, np.ndarray):
             image = PILImage.fromarray(source)
             self.source = "numpy"
